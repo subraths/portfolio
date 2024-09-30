@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
 	import '../app.css';
-	const links = ['home', 'skills', 'projects', 'about'];
+	const links = ['home', 'skills', 'projects', 'about', 'tutorial'];
 </script>
 
 <div class="wrapper">
@@ -46,7 +46,7 @@
 		padding: 1em 2em;
 		display: block;
 		text-transform: capitalize;
-		font-weight: 600;
+		font-weight: 300;
 		text-decoration: none;
 		transition-property: all;
 		transition-duration: 0.5s;

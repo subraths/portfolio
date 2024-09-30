@@ -1,11 +1,11 @@
 <script>
 	import Home from './Home.svelte';
-	import Tutorial from './tutorial.svelte';
+	import Skills from './Skills.svelte';
 </script>
 
 <Home />
+<Skills />
 <button>Hover over me</button>
-<Tutorial />
 
 <style>
 	button {
