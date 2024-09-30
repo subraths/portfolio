@@ -4,11 +4,15 @@
 </script>
 
 <div class="wrapper">
-	<nav class="">
-		<ul class="">
-			{#each links as link}
+	<nav>
+		<ul class="nav-list-container">
+			{#each links as link, i}
 				<li>
-					<a class="nav-link-item" href="/{link === 'home' ? '' : link}">
+					<a
+						class="nav-list-item {i === 0 && 'nav-list-item-first'} {i === links.length - 1 &&
+							'nav-list-item-last'}"
+						href="/{link !== 'home' ? link : ''}"
+					>
 						{link}
 					</a>
 				</li>
@@ -31,19 +35,14 @@
 		width: 100svw;
 	}
 
-	nav > ul {
-		margin: 0 auto;
-		max-width: 400px;
-		display: flex;
+	.nav-list-container {
+		margin: unset;
 		list-style: none;
-		border-radius: 2em;
+		display: flex;
 		justify-content: center;
-		padding-right: 2.28em;
-		backdrop-filter: blur(5px);
-		background-color: hsla(190, 100%, 60%, 0.25);
 	}
 
-	.nav-link-item {
+	.nav-list-item {
 		padding: 1em 2em;
 		display: block;
 		text-transform: capitalize;
@@ -51,10 +50,23 @@
 		text-decoration: none;
 		transition-property: all;
 		transition-duration: 0.5s;
+
+		backdrop-filter: blur(5px);
+		background-color: hsla(190, 100%, 60%, 0.25);
 	}
 
-	.nav-link-item:hover {
+	.nav-list-item:hover {
 		background-color: hsla(195, 80%, 1%, 0.25);
 		border-radius: 2em;
+	}
+
+	.nav-list-item-first {
+		border-top-left-radius: 2em;
+		border-bottom-left-radius: 2em;
+	}
+
+	.nav-list-item-last {
+		border-top-right-radius: 2em;
+		border-bottom-right-radius: 2em;
 	}
 </style>
