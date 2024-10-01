@@ -5,7 +5,7 @@
 	const libraries = ['react', 'redux', 'd3.js', 'passport'];
 	const frameworks = ['next.js', 'sveltekit', 'nest.js', 'tailwindcss', 'node.js', 'material-ui'];
 	const database = ['postgresql', 'mongodb'];
-	const other = ['aws', 'docker', 'linux'];
+	const other = ['aws', 'docker', 'linux', 'git'];
 
 	function addIconToSkillArr(arr: string[]): { name: string; icon: string }[] {
 		return arr.map((lang) => {
@@ -30,11 +30,18 @@
 		height: 100svh;
 	}
 
+	.skills-container h3 {
+		font-weight: 300;
+		font-size: 2rem;
+	}
+
 	.card {
 		margin-inline: auto;
 		max-width: var(--coloumn-width);
 		border-radius: 1em;
-		padding: 1em 2em;
+		padding-block-start: 1.5em;
+		padding-block-end: 3em;
+		padding-inline: 4em;
 		backdrop-filter: blur(2px);
 		background-color: rgba(255, 255, 255, 0.1);
 	}

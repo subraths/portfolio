@@ -4,7 +4,7 @@
 </script>
 
 <div>
-	<h5 class="title1">{title}</h5>
+	<h4 class="title1">{title}</h4>
 	<ul class="card-item-container">
 		{#each items as item}
 			<li class="card-item">
@@ -29,15 +29,14 @@
 
 	.card-item {
 		border-block: 1px solid red;
-		padding: 0.2em 1em;
+		padding: 0.4em 1em;
 		border-radius: 1em;
-		color: wheat;
 		font-weight: 300;
 		display: flex;
 	}
 
 	.card-item {
-		border: 1px solid white;
+		border: 1px solid purple;
 	}
 
 	.card-item img {

@@ -1,13 +1,12 @@
 :root {
 	font-family: 'Lexend Deca';
-	color: white;
 	--coloumn-width: 1080px;
+	--font-color: rgb(225, 217, 209);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
-
 body {
-	background-color: black;
+	background-color: rgb(44, 45, 45);
+	color: var(--font-color);
 }
 
 .wrapper {

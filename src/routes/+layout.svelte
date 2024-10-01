@@ -5,7 +5,7 @@
 	let coords = spring({ x: 50, y: 50 });
 	let size = spring(3);
 
-	const links = ['home', 'skills', 'projects', 'about', 'tutorial'];
+	const links = ['home', 'skills', 'projects', 'contact'];
 	console.log($coords);
 
 	const colors = ['#fff'];
@@ -98,13 +98,13 @@
 		text-transform: capitalize;
 		font-weight: 300;
 		text-decoration: none;
-		color: white;
 		transition-property: inherit;
-		transition-duration: 0.5s;
+		transition-duration: 0.3s;
 		border-block: 1px solid green;
+		color: var(--font-color);
 
 		backdrop-filter: blur(5px);
-		background-color: rgba(255, 255, 255, 0.1);
+		background-color: rgba(0, 0, 0, 0.1);
 	}
 
 	.nav-list-item:hover {
