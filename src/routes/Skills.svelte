@@ -5,6 +5,7 @@
 	const libraries = [
 		'react',
 		'redux-toolkit',
+		'zustand',
 		'react-router',
 		'd3.js',
 		'passport',

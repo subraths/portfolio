@@ -4,6 +4,29 @@
 
 	const projects = [
 		{
+			title: 'Protoezy designs',
+			link: 'https://protoezy.com/',
+			description: `This was a project I built for a startup company. The
+project is about making proto-types
+to small-scale companies, collage students or entrepreneurs so that they can
+execute their dream projects without huge
+investment. I was responsible for processing user uploaded designs and and extracting data needed to build PCB
+board and I was also responsible for connecting payments, orders and quotitions to admin dashboard`,
+			tools: [
+				'next.js',
+				'nest.js',
+				'zustand',
+				'typescript',
+				'passport',
+				'material-ui',
+				'tailwindcss',
+				'aws',
+				'docker',
+				'zustand',
+				'tracepace'
+			]
+		},
+		{
 			title: 'Real-time chat application',
 			link: 'https://github.com/subraths/chat-application',
 			description: `Chat application built in React and Express.js stack using web-sockets. This was my first
@@ -17,28 +40,6 @@
 				'react-router',
 				'redux-toolkit',
 				'jwt'
-			]
-		},
-		{
-			title: 'Protoezy designs',
-			link: 'https://protoezy.com/',
-			description: `This was a project I built for a startup company. The
-project is about making proto-types
-to small-scale companies, collage students or entrepreneurs so that they can
-execute their dream projects without huge
-investment. I was responsible for processing user uploaded designs and and extracting data needed to build PCB
-board and I was also responsible for connecting payments, orders and quotitions to admin dashboard`,
-			tools: [
-				'next.js',
-				'nest.js',
-				'typescript',
-				'passport',
-				'material-ui',
-				'tailwindcss',
-				'aws',
-				'docker',
-				'zustand',
-				'tracepace'
 			]
 		}
 	];
@@ -64,6 +65,7 @@ board and I was also responsible for connecting payments, orders and quotitions 
 <style>
 	.project + .project {
 		margin-block-start: 4em;
+		border-block-start: 1px solid (--bg-color);
 	}
 
 	.project-title-container {
