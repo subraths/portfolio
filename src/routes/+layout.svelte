@@ -1,7 +1,44 @@
 <script lang="ts">
+	import { spring } from 'svelte/motion';
 	import '../app.css';
+
+	let coords = spring({ x: 50, y: 50 });
+	let size = spring(3);
+
 	const links = ['home', 'skills', 'projects', 'about', 'tutorial'];
+	console.log($coords);
+
+	const colors = ['#fff'];
 </script>
+
+<svelte:window
+	on:mousemove={(e) => {
+		const values = { x: e.clientX, y: e.clientY };
+		coords.set(values);
+	}}
+/>
+
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
 
 <div class="wrapper">
 	<nav>
@@ -26,6 +63,18 @@
 </div>
 
 <style>
+	.circle {
+		width: 10px;
+		height: 10px;
+		background-color: black;
+		border-radius: 50%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1000;
+		pointer-events: none;
+	}
+
 	nav {
 		position: fixed;
 		top: 1rem;
@@ -33,6 +82,7 @@
 		transform: translateX(-50%);
 		display: block;
 		width: 100svw;
+		z-index: 99;
 	}
 
 	.nav-list-container {
@@ -48,16 +98,19 @@
 		text-transform: capitalize;
 		font-weight: 300;
 		text-decoration: none;
-		transition-property: all;
+		color: white;
+		transition-property: inherit;
 		transition-duration: 0.5s;
+		border-block: 1px solid green;
 
 		backdrop-filter: blur(5px);
-		background-color: hsla(190, 100%, 60%, 0.25);
+		background-color: rgba(255, 255, 255, 0.1);
 	}
 
 	.nav-list-item:hover {
 		background-color: hsla(195, 80%, 1%, 0.25);
 		border-radius: 2em;
+		border: 2px solid gold;
 	}
 
 	.nav-list-item-first {

@@ -1,0 +1,3 @@
+# Top-level configuration
+name = "portfolio"
+workers_dev = false

@@ -81,6 +81,7 @@
 	}
 
 	.name {
+		font-family: 'Pacifico', cursive;
 		font-weight: 300;
 	}
 

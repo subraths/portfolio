@@ -1,12 +1,13 @@
 :root {
 	font-family: 'Lexend Deca';
-	color: black;
+	color: white;
+	--coloumn-width: 1080px;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
 body {
-	background-image: url(/128518.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
+	background-color: black;
 }
 
 .wrapper {
@@ -14,6 +15,6 @@ body {
 }
 
 .container {
-	max-width: 1080px;
+	max-width: var(--coloumn-width);
 	margin-inline: auto;
 }
