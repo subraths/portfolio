@@ -1,15 +1,17 @@
 <script>
 	export let items;
-	export let title;
+	export let title = undefined;
 </script>
 
 <div>
-	<h4 class="title1">{title}</h4>
+	{#if title !== undefined}
+		<h4 class="title1">{title}</h4>
+	{/if}
 	<ul class="card-item-container">
 		{#each items as item}
 			<li class="card-item">
 				<img src={item.icon} alt={item.name} />
-				<span>{item.name}</span>
+				<span class="card-item-name">{item.name}</span>
 			</li>
 		{/each}
 	</ul>
@@ -18,6 +20,9 @@
 <style>
 	.title1 {
 		text-transform: capitalize;
+		font-weight: 300;
+		font-size: 1.2rem;
+		margin-block: 1.5em;
 	}
 
 	.card-item-container {
@@ -44,5 +49,9 @@
 		height: 23px;
 		padding-inline-end: 0.3em;
 		margin-block: auto;
+	}
+
+	.card-item-name {
+		text-transform: capitalize;
 	}
 </style>

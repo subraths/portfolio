@@ -2,7 +2,7 @@
 	font-family: 'Lexend Deca';
 	--coloumn-width: 1080px;
 	--font-color: rgb(225, 217, 209);
-	--bg-color: rgb(44, 45, 45);
+	--bg-color: rgba(44, 45, 45, 0.7);
 }
 
 body {
@@ -17,4 +17,22 @@ body {
 .container {
 	max-width: var(--coloumn-width);
 	margin-inline: auto;
+	height: 100svh;
+}
+
+.card {
+	margin-inline: auto;
+	max-width: var(--coloumn-width);
+	border-radius: 1em;
+	padding-block-start: 1.5em;
+	padding-block-end: 3em;
+	padding-inline: 4em;
+	backdrop-filter: blur(2px);
+	background-color: var(--bg-color);
+}
+
+.title {
+	font-weight: 300;
+	font-size: 2rem;
+	line-height: 2;
 }
