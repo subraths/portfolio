@@ -17,7 +17,11 @@ body {
 .container {
 	max-width: var(--coloumn-width);
 	margin-inline: auto;
-	height: 100svh;
+	min-height: 100svh;
+}
+
+.container + .container {
+	margin-block-start: 6em;
 }
 
 .card {
@@ -35,4 +39,5 @@ body {
 	font-weight: 300;
 	font-size: 2rem;
 	line-height: 2;
+	text-align: center;
 }
