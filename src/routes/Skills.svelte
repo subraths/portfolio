@@ -43,6 +43,6 @@
 		padding-block-end: 3em;
 		padding-inline: 4em;
 		backdrop-filter: blur(2px);
-		background-color: rgba(255, 255, 255, 0.1);
+		background-color: var(--bg-color);
 	}
 </style>
