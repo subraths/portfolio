@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { spring } from 'svelte/motion';
 	import '../app.css';
-	import Navbar from './Navbar.svelte';
+	import Navbar from '$comp/Navbar.svelte';
 
 	let coords = spring({ x: 50, y: 50 });
 	let size = spring(3);

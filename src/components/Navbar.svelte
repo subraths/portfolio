@@ -1,5 +1,17 @@
 <script lang="ts">
 	const links = ['home', 'skills', 'projects', 'contact'];
+
+	function scrollIntoView(event: Event) {
+		const target = event.target as HTMLAnchorElement;
+		const href = target.getAttribute('href');
+		if (!href) return;
+
+		const el = document.querySelector(href);
+		if (!el) return;
+		el.scrollIntoView({
+			behavior: 'smooth'
+		});
+	}
 </script>
 
 <nav>
@@ -9,7 +21,8 @@
 				<a
 					class="nav-list-item {i === 0 && 'nav-list-item-first'} {i === links.length - 1 &&
 						'nav-list-item-last'}"
-					href="/{link !== 'home' ? link : ''}"
+					href={'#' + link}
+					on:click|preventDefault={scrollIntoView}
 				>
 					{link}
 				</a>

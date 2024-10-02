@@ -18,7 +18,7 @@
 	const other = ['aws', 'docker', 'linux', 'git'];
 </script>
 
-<div class="container">
+<div id="skills" class="container">
 	<div class="card">
 		<h3 class="title">Skills & Technologies</h3>
 		<SkillsList title="languages" items={addIconToArr(languages)} />

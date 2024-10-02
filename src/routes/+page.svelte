@@ -1,8 +1,8 @@
 <script>
-	import Contact from './Contact.svelte';
-	import Home from './Home.svelte';
-	import Projects from './Projects.svelte';
-	import Skills from './Skills.svelte';
+	import Contact from '$comp/Contact.svelte';
+	import Home from '$comp/Home.svelte';
+	import Projects from '$comp/Projects.svelte';
+	import Skills from '$comp/Skills.svelte';
 </script>
 
 <Home />

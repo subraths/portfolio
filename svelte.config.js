@@ -4,10 +4,12 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 const config = {
 	preprocess: vitePreprocess(),
 	kit: {
+		alias: {
+			$comp: 'src/components'
+		},
 		adapter: adapter({
 			routes: {
-				include: ['/*'],
-				exclude: ['<all>']
+				include: ['/*']
 			},
 			platformProxy: {
 				configPath: 'wrangler.toml',

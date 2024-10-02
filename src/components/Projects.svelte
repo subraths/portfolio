@@ -45,7 +45,7 @@ board and I was also responsible for connecting payments, orders and quotitions 
 	];
 </script>
 
-<div class="container">
+<div id="projects" class="container">
 	<div class="card">
 		<h3 class="title">Projects</h3>
 		{#each projects as project}

@@ -52,7 +52,7 @@
 	}
 </script>
 
-<div class="home-container">
+<div id="home" class="home-container">
 	<h2>
 		<span class="hello">Hello!</span> <span class="name-intro">My name is</span>
 		<span class="name">Subrath S,</span><br /><span class="ima">I'm a</span> <br />
@@ -111,5 +111,6 @@
 	.description {
 		font-weight: 200;
 		font-size: 2.5rem;
+		margin-block-start: 5em;
 	}
 </style>
