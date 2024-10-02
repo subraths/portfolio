@@ -1,6 +1,5 @@
 import { error } from '@sveltejs/kit';
 import type { Actions } from './$types';
-import nodemailer from 'nodemailer';
 
 export const actions = {
 	'send-message': async ({ request }) => {
