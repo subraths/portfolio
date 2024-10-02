@@ -1,6 +1,6 @@
 <script lang="ts">
+	import { addIconToArr } from '$lib/utils';
 	import SkillsList from './SkillsList.svelte';
-	import { addIconToSkillArr } from './Skills.svelte';
 
 	const projects = [
 		{
@@ -57,7 +57,7 @@ board and I was also responsible for connecting payments, orders and quotitions 
 					</a>
 				</div>
 				<p class="project-desc">{project.description}</p>
-				<SkillsList title="tools & technologies" items={addIconToSkillArr(project.tools)} />
+				<SkillsList title="tools & technologies" items={addIconToArr(project.tools)} />
 			</div>
 		{/each}
 	</div>
@@ -66,7 +66,6 @@ board and I was also responsible for connecting payments, orders and quotitions 
 <style>
 	.project + .project {
 		margin-block-start: 4em;
-		border-block-start: 1px solid (--bg-color);
 	}
 
 	.project-title-container {
@@ -77,7 +76,8 @@ board and I was also responsible for connecting payments, orders and quotitions 
 	.project-title {
 		font-weight: 300;
 		font-size: 2.2rem;
-		margin-block: 1em;
+		margin-block: 0.7em;
+		color: lightseagreen;
 	}
 
 	.project a {
@@ -90,6 +90,7 @@ board and I was also responsible for connecting payments, orders and quotitions 
 	.project-desc {
 		font-weight: 300;
 		font-size: 1.2rem;
+		color: beige;
 	}
 
 	.project img {

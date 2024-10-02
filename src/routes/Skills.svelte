@@ -1,5 +1,6 @@
-<script lang="ts" context="module">
+<script lang="ts">
 	import SkillsList from './SkillsList.svelte';
+	import { addIconToArr } from '$lib/utils';
 
 	const languages = ['javascript', 'typescript', 'golang', 'java', 'html', 'css'];
 	const libraries = [
@@ -15,21 +16,15 @@
 	const frameworks = ['next.js', 'sveltekit', 'nest.js', 'tailwindcss', 'node.js', 'material-ui'];
 	const database = ['postgresql', 'mongodb'];
 	const other = ['aws', 'docker', 'linux', 'git'];
-
-	export function addIconToSkillArr(arr: string[]): { name: string; icon: string }[] {
-		return arr.map((lang) => {
-			return { name: lang, icon: `${lang.replaceAll('.', '')}.svg` };
-		});
-	}
 </script>
 
 <div class="container">
 	<div class="card">
 		<h3 class="title">Skills & Technologies</h3>
-		<SkillsList title="languages" items={addIconToSkillArr(languages)} />
-		<SkillsList title="frameworks" items={addIconToSkillArr(frameworks)} />
-		<SkillsList title="libraries" items={addIconToSkillArr(libraries)} />
-		<SkillsList title="database" items={addIconToSkillArr(database)} />
-		<SkillsList title="other" items={addIconToSkillArr(other)} />
+		<SkillsList title="languages" items={addIconToArr(languages)} />
+		<SkillsList title="frameworks" items={addIconToArr(frameworks)} />
+		<SkillsList title="libraries" items={addIconToArr(libraries)} />
+		<SkillsList title="database" items={addIconToArr(database)} />
+		<SkillsList title="other" items={addIconToArr(other)} />
 	</div>
 </div>

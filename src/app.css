@@ -5,6 +5,62 @@
 	--bg-color: rgba(44, 45, 45, 0.7);
 }
 
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+}
+
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+	isolation: isolate;
+}
+
+input,
+textarea {
+	all: unset;
+}
+
 body {
 	background-color: black;
 	color: var(--font-color);
@@ -28,7 +84,7 @@ body {
 	margin-inline: auto;
 	max-width: var(--coloumn-width);
 	border-radius: 1em;
-	padding-block-start: 1.5em;
+	padding-block-start: 3em;
 	padding-block-end: 3em;
 	padding-inline: 4em;
 	backdrop-filter: blur(2px);
@@ -40,4 +96,7 @@ body {
 	font-size: 2rem;
 	line-height: 2;
 	text-align: center;
+	color: skyblue;
+	border-block-end: 1px solid darkgreen;
+	padding-block-end: 1em;
 }
