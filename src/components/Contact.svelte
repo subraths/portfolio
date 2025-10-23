@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { PUBLIC_CONTACT_NUMBER, PUBLIC_CONTACT_EMAIL } from '$env/static/public';
 	import Form from './Form.svelte';
 </script>
 
@@ -9,11 +10,11 @@
 			<div>
 				<div class="flex">
 					<h5>Phone:</h5>
-					<a href="tel:+918762476331">+91-8762476331</a>
+					<a href={`tel:+91${PUBLIC_CONTACT_NUMBER}`}>+91-{PUBLIC_CONTACT_NUMBER}</a>
 				</div>
 				<div class="flex">
 					<h5>Email:</h5>
-					<a href="mailto:subraths@proto.me"><span>subraths@proton.me</span></a>
+					<a href={`mailto:${PUBLIC_CONTACT_EMAIL}`}><span>{PUBLIC_CONTACT_EMAIL}</span></a>
 				</div>
 			</div>
 		</div>
